@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=2]
+[ext_resource path="res://Shop/Coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Shop/Vending.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Shop/Shop.gd" type="Script" id=5]
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 40, 2, 40 )
@@ -51,6 +54,71 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Coins" type="Label" parent="HUD"]
+anchor_right = 1.0
+margin_bottom = 40.0
+text = "Coins: "
+align = 2
+valign = 1
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.919046, 0.39415, 0, -0.39415, 0.919046, 0, 10.8992, 22.0224 )
 current = true
+
+[node name="Coins" type="Spatial" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4671, 1.36767, -7.51323 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3946, 1.4194, -14.2203 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.82793, 1.63904, 0 )
+
+[node name="Shop" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="Health" type="Button" parent="Shop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 100.0
+margin_bottom = 20.0
+text = "Add Health (1 coin)"
+
+[node name="Ammo" type="Button" parent="Shop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = 40.0
+margin_right = 100.0
+margin_bottom = 80.0
+text = "Add Ammo (1 coin)"
+
+[node name="Close" type="Button" parent="Shop"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -99.0
+margin_top = -63.0
+margin_right = 101.0
+margin_bottom = -23.0
+text = "I'm done shopping"
+
+[node name="Vending" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.252234, 0, -2.98938, 0, 3, 0, 2.98938, 0, 0.252234, 7.01887, 3.35868, 9.76539 )
+
+[connection signal="pressed" from="Shop/Health" to="Shop" method="_on_Health_pressed"]
+[connection signal="pressed" from="Shop/Ammo" to="Shop" method="_on_Ammo_pressed"]
+[connection signal="pressed" from="Shop/Close" to="Shop" method="_on_Button_pressed"]

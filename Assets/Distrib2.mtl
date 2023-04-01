@@ -1,0 +1,95 @@
+# Blender 3.4.1 MTL File: 'bat2.blend'
+# www.blender.org
+
+newmtl Material.002
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/channels4_profile.jpg
+
+newmtl Material.007
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/Blender/Texture/metal/MetalStainlessSteelBrushedElongated005_COL_2K_METALNESS.jpg
+map_Ns C:/Users/Yohand/Pictures/Blender/Texture/metal/MetalStainlessSteelBrushedElongated005_ROUGHNESS_2K_METALNESS.jpg
+map_refl C:/Users/Yohand/Pictures/Blender/Texture/metal/MetalStainlessSteelBrushedElongated005_COL_2K_METALNESS.jpg
+map_Bump -bm 1.000000 C:/Users/Yohand/Pictures/Blender/Texture/metal/MetalStainlessSteelBrushedElongated005_NRM16_2K_METALNESS.tif
+
+newmtl Material.009
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.046961 0.046961 0.046961
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.011
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/Blender/Texture/plastic/Plastic006_2K_Color.jpg
+map_Ns C:/Users/Yohand/Pictures/Blender/Texture/plastic/Plastic006_2K_Roughness.jpg
+map_Bump -bm 1.000000 C:/Users/Yohand/Pictures/Blender/Texture/plastic/Plastic006_2K_NormalDX.jpg
+
+newmtl Material.012
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/Fanta-logo.png.png
+
+newmtl Material.013
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/sprite-logo-0FD1748C65-seeklogo.com.png
+
+newmtl Material.014
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/Tropico_Fond_Bleu.png
+
+newmtl Material.015
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/6.png
+
+newmtl Material.016
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Yohand/Pictures/8.png
