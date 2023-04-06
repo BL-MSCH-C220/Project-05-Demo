@@ -81,4 +81,8 @@ omni_attenuation = 5.27803
 wait_time = 0.2
 one_shot = true
 
+[node name="Assist" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.769702, 0 )
+cast_to = Vector3( 0, 0, -10 )
+
 [connection signal="timeout" from="Pivot/Flash/Timer" to="." method="_on_Timer_timeout"]

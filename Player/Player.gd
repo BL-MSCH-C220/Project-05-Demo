@@ -2,6 +2,7 @@ extends KinematicBody
 
 onready var camera = $Pivot/Camera
 onready var Decal = load("res://Player/Decal.tscn")
+onready var rc = $Pivot/RayCast
 
 var speed = 5
 var gravity = -8.0
@@ -10,6 +11,7 @@ var mouse_sensitivity = 0.001
 var mouse_range = 1.2
 var velocity = Vector2.ZERO
 
+var aim_assist = 0.1
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -26,6 +28,13 @@ func _physics_process(_delta):
 	
 	if Input.is_action_pressed("shoot"):
 		shoot()
+		
+	if rc.is_colliding() and rc.get_collider().is_in_group("Enemies"):
+		$Assist.look_at(rc.get_collider().global_transform.origin, Vector3.UP)
+		rotation.y = lerp_angle(rotation.y, $Assist.rotation.y + rotation.y, aim_assist)
+		$Pivot.rotation.x = lerp_angle($Pivot.rotation.x, $Assist.rotation.x, aim_assist)
+	else:
+		$Assist.rotation = Vector3.ZERO
 
 func _input(event):
 	if event is InputEventMouseMotion:
